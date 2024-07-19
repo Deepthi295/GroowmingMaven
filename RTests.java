@@ -1,5 +1,14 @@
 package com.nopcommerce;
 
-public class RTests {
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
+public class RTests {
+	
+	@Test(retryAnalyzer = Mylisterners.class)
+
+	 public void test1() {
+		 System.out.println("Hellow world");
+		 Assert.assertTrue(false);
+	 }
 }
