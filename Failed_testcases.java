@@ -1,5 +1,6 @@
 package com.nopcommerce;
 
+
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Listeners;
@@ -8,11 +9,14 @@ import org.testng.annotations.Test;
 @Listeners(MYListeners.class)
 
 public class Failed_testcases extends SetUp {
+MYListeners ml = new MYListeners();
+
 
 	@Test
 	public void test1() {
 		driver.get("https://practice.expandtesting.com/");
-		Assert.assertTrue(true);
+		Assert.assertTrue(false);
+		
 	}
 
 	@Test
@@ -32,7 +36,7 @@ public class Failed_testcases extends SetUp {
 	@Test
 	public void test4() {
 		driver.get("https://www.facebook.com/");
-		Assert.assertTrue(false);
+		Assert.assertTrue(true);
 	}
 
 	@AfterMethod

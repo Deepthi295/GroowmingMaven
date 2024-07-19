@@ -18,7 +18,6 @@ public class MYListeners  extends SetUp implements ITestListener{
 		
 		// TODO Auto-generated method stub
 	//	ITestListener.super.onTestFailure(result);
-		System.out.println("print when test case failed");
 		try {
 			takeScrenS();
 		} catch (IOException e) {
@@ -34,7 +33,6 @@ public class MYListeners  extends SetUp implements ITestListener{
 	    TakesScreenshot tk = (TakesScreenshot) driver;
 		File file = tk.getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(file, new File("./Screenshots/" + l + "Failedscrenshot.png"));
-
 	}
 
 
