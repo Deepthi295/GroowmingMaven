@@ -29,8 +29,7 @@ public class MYListeners  extends SetUp implements ITestListener{
 	public void takeScrenS() throws IOException {
 		Date d1 = new Date();
 		long l = d1.getTime();
-
-	    TakesScreenshot tk = (TakesScreenshot) driver;
+        TakesScreenshot tk = (TakesScreenshot) driver;
 		File file = tk.getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(file, new File("./Screenshots/" + l + "Failedscrenshot.png"));
 	}
